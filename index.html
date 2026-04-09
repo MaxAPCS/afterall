@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>After All</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://unpkg.com/inkjs/full"></script>
+    <style>
+      @font-face {
+        font-family: 'Coming Soon';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(ComingSoon-Regular.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      body {
+        background-color: #222;
+        display: flex;
+        justify-content: center;
+      }
+
+      main {
+        width: min(700px, 100vw);
+        font-family: "Coming Soon", sans-serif;
+      }
+
+      #story {
+        color: whitesmoke;
+      }
+
+      #storyChoice {
+        color: lightblue;
+      }
+
+      #storyChoice > a {
+        margin-right: 2rem;
+        cursor: pointer;
+      }
+
+      p, a {
+        opacity: 0%;
+        animation: show 300ms 100ms ease-in forwards;
+      }
+
+      @keyframes show {
+        100% {
+          opacity: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div id="story"></div>
+      <div id="storyChoice"></div>
+    </main>
+    <script>
+      const storyContainer = document.getElementById("story");
+      const storyChoiceContainer = document.getElementById("storyChoice");
+
+      let story;
+      fetch('story.ink')
+        .then(async (response) => {
+          story = new inkjs.Compiler(await response.text()).Compile();
+          continueStory();
+        });
+
+      async function continueStory() {
+        while (story.canContinue) {
+          // Create new passage element
+          const paragraphElement = document.createElement('p');
+          paragraphElement.textContent = story.Continue();
+          paragraphElement.styleTags(story.currentTags);
+          storyContainer.appendChild(paragraphElement);
+          window.scrollTo(0, document.body.scrollHeight);
+
+          await new Promise(resolve => setTimeout(resolve, 500));
+        }
+
+        for (const choice of story.currentChoices) {
+          // Create new choice element
+          const choiceElement = document.createElement('a');
+          choiceElement.textContent = choice.text;
+          choiceElement.styleTags(choice.tags);
+          storyChoiceContainer.appendChild(choiceElement);
+
+          choiceElement.addEventListener("click", (event) => {
+            event.preventDefault();
+            story.ChooseChoiceIndex(choice.index);
+
+            // Remove existing choices
+            storyChoiceContainer.replaceChildren();
+            continueStory();
+          });
+        }
+        window.scrollTo(0, document.body.scrollHeight);
+      }
+
+      HTMLElement.prototype.styleTags =
+        function (tags) {
+          const color = tags[0]?.trim();
+          if (color) {
+            this.style.color = color;
+          }
+          if (tags.includes("inline")) {
+            this.style.display = "inline";
+          }
+          if (tags.includes("italic")) {
+            this.style.fontStyle = "italic";
+          }
+        }
+    </script>
+  </body>
+</html>
