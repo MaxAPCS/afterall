@@ -5,7 +5,7 @@
     <title>After All</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script src="https://unpkg.com/inkjs/full"></script>
+    <script src="ink-full.js"></script>
     <style>
       @font-face {
         font-family: 'Coming Soon';
@@ -42,7 +42,7 @@
 
       p, a {
         opacity: 0%;
-        animation: show 300ms 100ms ease-in forwards;
+        animation: show 400ms ease-in forwards;
       }
 
       @keyframes show {
@@ -70,18 +70,15 @@
 
       async function continueStory() {
         while (story.canContinue) {
-          // Create new passage element
           const paragraphElement = document.createElement('p');
           paragraphElement.textContent = story.Continue();
           paragraphElement.styleTags(story.currentTags);
           storyContainer.appendChild(paragraphElement);
-          window.scrollTo(0, document.body.scrollHeight);
 
-          await new Promise(resolve => setTimeout(resolve, 500));
+          await new Promise(resolve => setTimeout(resolve, 750));
         }
 
         for (const choice of story.currentChoices) {
-          // Create new choice element
           const choiceElement = document.createElement('a');
           choiceElement.textContent = choice.text;
           choiceElement.styleTags(choice.tags);
@@ -90,13 +87,10 @@
           choiceElement.addEventListener("click", (event) => {
             event.preventDefault();
             story.ChooseChoiceIndex(choice.index);
-
-            // Remove existing choices
-            storyChoiceContainer.replaceChildren();
+            storyChoiceContainer.replaceChildren(); // remove existing choices
             continueStory();
           });
         }
-        window.scrollTo(0, document.body.scrollHeight);
       }
 
       HTMLElement.prototype.styleTags =
