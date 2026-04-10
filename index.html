@@ -23,7 +23,7 @@
       }
 
       main {
-        width: min(700px, 100vw);
+        width: min(800px, 100vw);
         font-family: "Coming Soon", sans-serif;
       }
 
@@ -33,11 +33,14 @@
 
       #storyChoice {
         color: lightblue;
+        display: flex;
+        justify-content: flex-start;
+        gap: 2rem;
       }
 
-      #storyChoice > a {
-        margin-right: 2rem;
+      #storyChoice > a:hover {
         cursor: pointer;
+        text-decoration: underline;
       }
 
       p, a {

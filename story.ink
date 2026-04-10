@@ -35,7 +35,7 @@ The first time you met, it was her sitting by you in class. It must've been an i
 - A thousand yellowing streetlights foil the stars above, and cast a warm glow over your spots on the hill. A small breeze whistles through the tufts of grass as distant ocean waves punctuate the silence. You spend a lot of time joking about how dull your corner of the city is, but, spread out like this, it's really serene.
 Every corner your eyes sweep over brings to mind a memory of you and her, getting dessert after school, singing along on park paths, leaving thrift stores with overflowing bags, racing up every staircase- together weaving a tapestry in your mind. These years have been the most precious experiences you could've asked for, all the little moments that made you fall in love.
 
-* "Do you remember the bonfire we had?"[] #orchid #inline
+* "do you remember the bonfire we had?"[] #orchid #inline
 , you say, pointing towards the beach's general direction. #inline
 ~ sentiment+=2
 You can tell the same vignette appears before her too, flickering firelight against the setting sun. After all the bags of chips had been emptied, the s'mores had been made, the photos taken, you sat in her lap, making use of the few chairs people had remembered to bring. You turned to face her: just inches away from each other, the others fading into the distance- you wanted to lean in right then.
@@ -55,18 +55,18 @@ You've said a million things to her on a million sleepless nights, rewinding and
 Her #inline
 "what is it?" #darkseagreen #inline
 snaps you back to the moment. She's here, with you, right now. #inline
-"Just- thank you for making these few years so special." #orchid
+"just- thank you for making these few years so special." #orchid
 "thanks. that means a lot, actually." #darkseagreen
 
-* "Do you remember the crazy dude who got onto our bus?"[] #orchid
+* "do you remember the crazy guy who got on our bus?"[] #orchid
 He'd stumbled on sometime after 10:30, half-empty liquor bottle in hand, mumbling something about 9/11. Between coughs, he remarked that #inline
 "convenient. *hic* for bush. youngins just believe anything. no way-" #crimson #inline
 before promptly passing out and spilling the remnants of the bottle all over the floor. Both of you broke into laughter at the sheer absurdity. #inline
 She chuckles a little.
 "pfft. what a nutjob" #darkseagreen
-"i was (you pause) there! i saw him push the button!" #orchid #inline
+"I was (you pause) there! I saw him push the button!" #orchid #inline
 , you mock. That gets her laughing out loud. #inline
-"i guess we definitely have been through a lot.." #darkseagreen
+"I guess we definitely have been through a lot.." #darkseagreen
 You contemplate, playing through a few moments in your mind.
 
 // TODO: could add another option here
@@ -97,9 +97,9 @@ You scoot a little closer to rest your head on hers, and sit like that for a whi
 The only thing you haven't ever confided is how she makes you feel.
 { sentiment > 2:
 But, with time escaping with the wind, this might be your last chance.
-* [i can't do it]
+* [I can't do it]
 -> confess.dont
-* [i can't let this pass me by]
+* [I can't let this pass me by]
 -> confess.do
 - else:
 * [it's not the right time]
@@ -110,7 +110,7 @@ But, with time escaping with the wind, this might be your last chance.
 = do
 And you're going to take it. #white
 She means the world to you in a way that nobody else could. There's so much you want to say, you've wanted to say, and it all comes to this.
-"hey, um. i like you. #orchid
+"hey, um. I like you. #orchid
 like, as more than friends. #orchid
 I have for a while. #orchid
 sorry. I just wanted to get it off my ches-" #orchid
