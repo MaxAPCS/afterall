@@ -17,9 +17,10 @@
       }
 
       body {
-        background-color: #222;
+        background: #222 center left;
         display: flex;
         justify-content: center;
+        transition: background 10s ease-out 2s;
       }
 
       main {
@@ -45,6 +46,7 @@
 
       p, a {
         opacity: 0%;
+        filter: drop-shadow(#111 .2rem .2rem .1rem);
         animation: show 400ms ease-in forwards;
       }
 
@@ -63,6 +65,8 @@
     <script>
       const storyContainer = document.getElementById("story");
       const storyChoiceContainer = document.getElementById("storyChoice");
+      const audio = new Audio("https://dj.pew.bio/share/s/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE4MDg1MTk4NDAsImlkIjoiVWt1T2s2RlFlQUtkWDdQczBqTUkxciIsImlzcyI6Ik5EIn0.so8lUZTxS55_LW923fcZmB8pn_ozb1xWhIxjc77ey5M");
+      const image = "https://imgs.pew.bio/api/v1/t/1e34b5d3e24b386a3fe784194a08226e1ab1bcf7/7z75e5yz/fit_5120";
 
       let story;
       fetch('story.ink')
@@ -77,6 +81,18 @@
           paragraphElement.textContent = story.Continue();
           paragraphElement.styleTags(story.currentTags);
           storyContainer.appendChild(paragraphElement);
+
+          if (story.currentTags[0] === "beginscene") {
+            audio.volume = 0
+            audio.play()
+            document.body.style.background = `url('${image}') center right / cover no-repeat fixed`;
+            setTimeout(async () => {
+              while (audio.volume < 0.5) {
+                audio.volume+=0.01
+                await new Promise(resolve => setTimeout(resolve, 200));
+              }
+            }, 0)
+          }
 
           await new Promise(resolve => setTimeout(resolve, 750));
         }

@@ -23,7 +23,8 @@ She waits at the crest, watching you amble up to the top, and you speed up your 
 "you're missing out on this view." #darkseagreen
 As you approach her, the city reveals itself:
 
-- Rows of houses, streets, and telephone lines stretch out like a mat beneath your feet, and you consider that you've never actually been here at night.
+- #beginscene
+Rows of houses, streets, and telephone lines stretch out like a mat beneath your feet, and you consider that you've never actually been here at night.
 As you take in the view, she sits down on the grass. You follow, setting your bag down and sitting on her left.
 "it's so nice here at night." #darkseagreen
 The first time you met, it was her sitting by you in class. It must've been an impossible coincidence, and one you've been forever grateful for. She was funny, smart, knew when to speak up, and you couldn't get over the the way her hair flowed over her shoulders, the way her hand rested perfectly on top of yours, and, most of all, that subtle green in her eyes you'd get lost in every time.
@@ -80,6 +81,7 @@ She slips, laughing<>
 ~ sentiment++
 , but lets her head rest in your lap as she repositions.
 "wow." #darkseagreen
+-> lap_mark ->
 - else:
 ~ sentiment--
 : #inline
@@ -98,7 +100,7 @@ The only thing you haven't ever confided is how she makes you feel.
 { sentiment > 2:
 But, with time escaping with the wind, this might be your last chance.
 * [I can't do it]
--> confess.dont
+-> confess.other
 * [I can't let this pass me by]
 -> confess.do
 - else:
@@ -110,6 +112,11 @@ But, with time escaping with the wind, this might be your last chance.
 = do
 And you're going to take it. #white
 She means the world to you in a way that nobody else could. There's so much you want to say, you've wanted to say, and it all comes to this.
+{ lap_mark:
+You look down at her face<>
+- else:
+You turn toward her<>
+} in the dim light, and set your heart free.
 "hey, um. I like you. #orchid
 like, as more than friends. #orchid
 I have for a while. #orchid
@@ -117,13 +124,32 @@ sorry. I just wanted to get it off my ches-" #orchid
 And you don't to finish your sentence, because your lips close on something else.
 Ending 1 <3 #italic
 -> END
+= other
+Yet, though the time never seems right, she turns her gaze to you.
+"can I confess something? #darkseagreen
+you're my best friend. But us, here, #darkseagreen
+(she squeezes your hand) #italic
+sometimes it feels like it crosses a line- #darkseagreen
+I mean, I guess I meant to say #darkseagreen
+maybe we could be more than friends?" #darkseagreen
+More than anything else in that moment, you want to.
+Ending 1 Version 2 <3 #italic
+-> END
 = dont
 If only the time were right- and it never is.
-You wonder why we leave love to such chance, how something so valuable could be so fleeting. To think that you got so close wrenches your heart, but you can't muster the courage.
+You wonder why we leave love to such chance, how something so valuable could be so fleeting. To think that you got so close wrenches your heart, but you can't muster the courage. She's right there <>
+{ lap_mark:
+in front of you<>
+- else:
+beside you<>
+}, yet between your hearts there's a wall you'll never get through.
 Next time, you'll walk your city and pretend every stump, every path, and every constellation doesn't hold a connection you'll never be able to replace.
 Ending 2 </3 #italic
 Hint: don't lighten the mood. #darkgrey #italic
 -> END
+
+=== lap_mark ===
+->->
 
 === shoulder_loop ===
 * [wait]
