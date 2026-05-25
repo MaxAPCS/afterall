@@ -122,7 +122,8 @@ like, as more than friends. #orchid
 I have for a while. #orchid
 sorry. I just wanted to get it off my ches-" #orchid
 And you don't to finish your sentence, because your lips close on something else.
-Ending 1 <3 #italic
+-> kiss ->
+Ending 1A <3 #italic
 -> END
 = other
 Yet, though the time never seems right, she turns her gaze to you.
@@ -133,7 +134,8 @@ sometimes it feels like it crosses a line- #darkseagreen
 I mean, I guess I meant to say #darkseagreen
 maybe we could be more than friends?" #darkseagreen
 More than anything else in that moment, you want to.
-Ending 1 Version 2 <3 #italic
+-> kiss ->
+Ending 1B <3 #italic
 -> END
 = dont
 If only the time were right- and it never is.
@@ -158,4 +160,19 @@ You watch the last few cars drive by as the night waxes.
 * [speak]
 "I'm really going to miss this, you know?" #orchid
 "me too." #darkseagreen
+->->
+
+=== kiss ===
+* The record skips.
+- It's magic when it happens, the world fading out around you to make way for an impossibly vibrant burst of color. How long have you wanted this, shelved your ache until you grew used to the slight suffocation. Sent signals lost in space, sparks striking just under surfaces. It feels like lost time longing, loving at arm's length.
+You can retrace every footfall on empty sidewalks, run your hand through every whispering breeze to the sound of your song building to this crescendo. It's a movie you would've loved to direct, taking care to catch every instant the twist between your paths drew tighter. When you pull away, the crisp air that you draw in is filled with a flood of memories.
+So you dream. You dream of a life you've already lived, recoloring with this bond finally brought to light. Little tweaks, longer smiles, pieces of stories unwritten. The sun filtering through tall branches falls on your locked hands a little differently running below the trees, fingers wrapped tightly with the knowledge.
+
+* [If only.]
+In truth, every shooting star was a prayer. You counted so your gaze would speak what you couldn't say, read your circling thoughts aloud. All your life, she'd been right there, just three words and a world away. In another time, your full selves met under the moonlight with knowledge the glow was reciprocated.
+
+* [I think it was better this way.]
+But you can't speak to what you have. Orbiting just close enough, you've written poetry in words through lips unburdened. Maybe slowly drawing closer made the steps richer, patience and treading water turning each grasp electric. Warmth flushed your mind the first time her head rested on your shoulder, and lingered after each goodbye in oxytocin-tinted embrace.
+
+- Through your reverie, the kiss reconnects. Behind your head, her hand is woven into your hair. It feels like nothing before, rushing years of history fit into seconds. Each touch an imprint, debris from your closest collision. Maybe you were right to call it love.
 ->->
